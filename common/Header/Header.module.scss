@@ -25,12 +25,22 @@
 	background-color: #101010;
 }
 
+.show {
+	display: flex !important;
+}
+
+.hide {
+	display: flex !important;
+}
+
 .menu {
 	display: inline-flex;
 	align-items: center;
 	.navMenu {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
+		flex-direction: row;
 		align-items: center;
 		.dismiss {
 			display: none;
@@ -68,13 +78,6 @@
 	margin-left: 3.5rem;
 }
 
-.navLink {
-	font-weight: 500;
-	color: #475569;
-	font-size: 0.9rem;
-	position: "relative";
-}
-
 .navLink:hover {
 	color: #482ff7;
 }
@@ -85,7 +88,14 @@
 	color: #482ff7;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
+	.show {
+		display: flex !important;
+	}
+
+	.hide {
+		display: none !important;
+	}
 	.menu {
 		.navMenu {
 			.dismiss {
@@ -121,6 +131,8 @@
 	.hamburger {
 		display: block;
 		cursor: pointer;
+		background-color: transparent;
+		border: none;
 	}
 
 	.hamburger.active .bar:nth-child(2) {
