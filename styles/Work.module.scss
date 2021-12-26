@@ -1,0 +1,24 @@
+@import "./variables";
+
+.container {
+  border: 1px solid blue;
+}
+
+.text {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 0.1;
+  border: 2px solid red;
+  max-width: 1000px;
+  margin: auto;
+
+  p:last-child {
+    color: $primaryColor;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .text {
+    font-size: 50px;
+  }
+}
